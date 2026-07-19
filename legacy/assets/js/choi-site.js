@@ -58,7 +58,7 @@
 	}
 
 	function loadPublicEntries() {
-		return fetch('data/diary-entries.json')
+		return fetch('../data/diary-entries.json')
 			.then(function (response) {
 				if (!response.ok)
 					throw new Error('Diary data unavailable');
