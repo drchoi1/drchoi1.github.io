@@ -183,7 +183,11 @@ h3 { margin: 0; font-size: 1rem; font-weight: 600; }
 .research-areas article:last-child { padding-bottom: 0; }
 .research-areas p { margin: 0; }
 
-.teaching-place + .teaching-place { margin-top: 2rem; }
+.teaching-place {
+  border: 0;
+}
+
+.teaching-place + .teaching-place { margin-top: 1.4rem; }
 
 .teaching-place h3 {
   color: var(--accent);
@@ -196,8 +200,13 @@ h3 { margin: 0; font-size: 1rem; font-weight: 600; }
   display: grid;
   grid-template-columns: 7.5rem minmax(0, 1fr);
   gap: 1rem;
-  padding-block: 0.18rem;
+  border: 0;
+  line-height: 1.35;
+  padding-block: 0.08rem;
 }
+
+.course-list > div::before,
+.course-list > div::after { content: none; }
 
 .course-list dt {
   color: var(--muted);
@@ -206,6 +215,11 @@ h3 { margin: 0; font-size: 1rem; font-weight: 600; }
 }
 
 .course-list dd { margin: 0; }
+
+.course-meta {
+  color: var(--muted);
+  font-size: 0.82em;
+}
 
 .course-detail {
   display: grid;
