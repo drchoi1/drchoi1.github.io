@@ -74,15 +74,36 @@ a:hover, a:focus-visible { text-decoration-color: var(--accent); }
 .nav-links {
   display: flex;
   flex: 1 1 auto;
-  gap: 1.2rem;
+  align-self: stretch;
+  align-items: end;
+  gap: 0.25rem;
   overflow-x: auto;
   scrollbar-width: none;
   white-space: nowrap;
 }
 
 .nav-links::-webkit-scrollbar { display: none; }
-.nav-links a { color: var(--muted); font-size: 0.88rem; text-decoration: none; }
+.nav-links a {
+  display: inline-flex;
+  align-items: center;
+  height: 2.5rem;
+  border: 1px solid transparent;
+  border-bottom: 0;
+  border-radius: 0.35rem 0.35rem 0 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  padding-inline: 0.85rem;
+  text-decoration: none;
+}
 .nav-links a:hover, .nav-links a:focus-visible { color: var(--text); }
+
+.nav-links a[aria-current="page"] {
+  position: relative;
+  bottom: -1px;
+  border-color: var(--line);
+  background: var(--bg);
+  color: var(--text);
+}
 
 .theme-toggle {
   display: inline-flex;
@@ -101,6 +122,34 @@ a:hover, a:focus-visible { text-decoration-color: var(--accent); }
 main, footer {
   width: min(78rem, calc(100% - 3rem));
   margin-inline: auto;
+}
+
+.page-shell {
+  min-height: calc(100vh - 10rem);
+}
+
+.inner-page {
+  padding-block: clamp(3.5rem, 8vw, 6.5rem);
+}
+
+.page-heading {
+  max-width: 46rem;
+  margin-bottom: clamp(3rem, 7vw, 5rem);
+}
+
+.page-heading h1 {
+  margin-bottom: 1rem;
+  font-size: clamp(2.7rem, 6vw, 4.5rem);
+}
+
+.page-heading > :last-child { margin-bottom: 0; }
+
+.page-content > section {
+  display: grid;
+  grid-template-columns: 8rem minmax(0, 1fr);
+  gap: 2rem;
+  border-top: 1px solid var(--line);
+  padding-block: 2.75rem;
 }
 
 .intro {
@@ -185,7 +234,7 @@ h3 { margin: 0; font-size: 1rem; font-weight: 600; }
 
 .teaching-group + .teaching-group { margin-top: 3rem; }
 
-.teaching-group > h3 {
+.teaching-group > h2 {
   font-size: 1.08rem;
   margin-bottom: 1.15rem;
 }
@@ -196,7 +245,7 @@ h3 { margin: 0; font-size: 1rem; font-weight: 600; }
 
 .teaching-place + .teaching-place { margin-top: 1.4rem; }
 
-.teaching-place h4 {
+.teaching-place h3 {
   color: var(--accent);
   font-size: 0.95rem;
   font-weight: 600;
@@ -325,8 +374,11 @@ footer {
   .site-name { flex: 1 1 auto; }
   .theme-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
   .nav-links { order: 3; flex-basis: 100%; padding-top: 0.45rem; }
+  .nav-links a { height: 2.25rem; padding-inline: 0.7rem; }
   .intro { grid-template-columns: 1fr; min-height: auto; padding-block: 4rem; }
   .portrait { width: min(13rem, 55vw); }
+  .inner-page { padding-block: 3.5rem; }
+  .page-content > section { grid-template-columns: 1fr; gap: 1rem; }
   main > section:not(.intro) { grid-template-columns: 1fr; gap: 1rem; padding-block: 2.75rem; scroll-margin-top: 6.5rem; }
   .research-areas article { grid-template-columns: 1fr; gap: 0.5rem; }
   .course-list > div { grid-template-columns: 6.5rem minmax(0, 1fr); gap: 0.8rem; }

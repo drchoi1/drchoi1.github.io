@@ -5,30 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Hee Joong Choi is a linguist working on Korean, Spanish, pragmatics, and intonational meaning.">
   <title>Hee Joong Choi</title>
-  <script>
-    document.documentElement.dataset.theme = localStorage.getItem('theme') || 'system';
-  </script>
-  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.dataset.theme = localStorage.getItem('theme') || 'system';</script>
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
   <header class="site-header">
     <nav class="nav" aria-label="Main navigation">
-      <a class="site-name" href="#top">Hee Joong Choi</a>
+      <a class="site-name" href="/">Hee Joong Choi</a>
       <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#teaching">Teaching</a>
-        <a href="#personal">Personal</a>
-        <a href="#contact">Contact</a>
+        <a href="/" aria-current="page">Home</a>
+        <a href="/about/">About</a>
+        <a href="/research/">Research</a>
+        <a href="/teaching/">Teaching</a>
+        <a href="/personal/">Personal</a>
       </div>
       <button class="theme-toggle" type="button" aria-label="Change color theme" title="Change color theme">
-        <span aria-hidden="true">◐</span>
-        <span class="theme-label">System</span>
+        <span aria-hidden="true">◐</span><span class="theme-label">System</span>
       </button>
     </nav>
   </header>
 
-  <main id="top">
+  <main class="page-shell home-page">
     <section class="intro" aria-labelledby="intro-title">
       <div>
         <p class="kicker">Linguistics · UMass Amherst</p>
@@ -36,185 +33,11 @@
         <p class="intro-text">I am a Ph.D. student in Spanish &amp; Portuguese and Linguistics at the University of Massachusetts Amherst.</p>
         <p>I work on Korean and varieties of Spanish, with interests in formal pragmatics, intonational meaning, and biased polar questions.</p>
       </div>
-      <img class="portrait" src="images/ChoiHJ_profile.png" alt="Hee Joong Choi">
+      <img class="portrait" src="/images/ChoiHJ_profile.png" alt="Hee Joong Choi">
     </section>
-
-    <section id="about" aria-labelledby="about-title">
-      <h2 id="about-title">About</h2>
-      <div class="section-body">
-        <p>I am a linguist working across Korean and Spanish. My broader interests include meaning in conversation, prosody, and language variation.</p>
-        <div class="document-links" aria-label="Professional documents">
-          <!-- Replace each span with an <a> when its PDF is added. -->
-          <span>Academic CV <small>PDF forthcoming</small></span>
-          <span>Industry résumé <small>PDF forthcoming</small></span>
-        </div>
-      </div>
-    </section>
-
-    <section id="research" aria-labelledby="research-title">
-      <h2 id="research-title">Research</h2>
-      <div class="section-body">
-        <p class="section-note">Research interests, with related work collected under each area.</p>
-        <div class="research-areas">
-          <article>
-            <h3>Formal pragmatics and discourse</h3>
-            <p class="empty-state">Related publications and presentations.</p>
-          </article>
-          <article>
-            <h3>Intonational meaning</h3>
-            <p class="empty-state">Related publications and presentations.</p>
-          </article>
-          <article>
-            <h3>Biased polar questions</h3>
-            <p class="empty-state">Related publications and presentations.</p>
-          </article>
-          <article>
-            <h3>Korean and varieties of Spanish</h3>
-            <p class="empty-state">Related publications and presentations.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="teaching" aria-labelledby="teaching-title">
-      <h2 id="teaching-title">Teaching</h2>
-      <div class="section-body">
-        <div class="teaching-history">
-          <section class="teaching-group" aria-labelledby="higher-education-title">
-            <h3 id="higher-education-title">Higher Education</h3>
-
-            <section class="teaching-place">
-              <h4><i>University of Massachusetts Amherst</i></h4>
-              <dl class="course-list">
-                <div><dt>2026 Spring</dt><dd>Teaching Assistant, LING-394BI <span class="course-meta">(Language and Cognition; instructor: Shota Negishi)</span></dd></div>
-                <div><dt>2025 Fall</dt><dd>Teaching Assistant, LING-101 <span class="course-meta">(People and Their Language; instructor: Rajesh Bhatt)</span></dd></div>
-                <div><dt>2025 Spring</dt><dd>Teaching Assistant, SPAN-311 <span class="course-meta">(Spanish Advanced Grammar; instructor: Jorge Gimeno Robles)</span></dd></div>
-                <div><dt>2024 Fall</dt><dd>Teaching Assistant, SPAN-311 <span class="course-meta">(Spanish Advanced Grammar; instructor: Jorge Gimeno Robles)</span></dd></div>
-                <div><dt>2024 Spring</dt><dd>Teaching Assistant, LING-101 <span class="course-meta">(People and Their Language; instructor: Magda Oiry)</span></dd></div>
-                <div><dt>2023 Fall</dt><dd>Teaching Associate, SPAN-240 <span class="course-meta">(Elementary Spanish 1; language program director: Carole Cloutier)</span></dd></div>
-                <div><dt>2023 Spring</dt><dd>Teaching Associate, SPAN-240 <span class="course-meta">(Elementary Spanish 1; language program director: Carole Cloutier)</span></dd></div>
-                <div><dt>2022 Fall</dt><dd>Teaching Associate, SPAN-230 <span class="course-meta">(Elementary Spanish 1; language program director: Carole Cloutier)</span></dd></div>
-                <div><dt>2022 Spring</dt><dd>Teaching Associate, SPAN-120 <span class="course-meta">(Elementary Spanish 1; language program director: Carole Cloutier)</span></dd></div>
-                <div><dt>2021 Fall</dt><dd>Teaching Associate, SPAN-110 <span class="course-meta">(Elementary Spanish 1; language program director: Carole Cloutier)</span></dd></div>
-              </dl>
-            </section>
-
-            <section class="teaching-place">
-              <h4><i>Seoul National University</i></h4>
-              <dl class="course-list">
-                <div><dt>2020 Fall</dt><dd>Teaching Assistant, Practice in Latin American Poems <span class="course-meta">(Instructor: Hyeonkyun Kim)</span></dd></div>
-                <div><dt>2019 Fall</dt><dd>Teaching Assistant, Spanish Grammar 2 <span class="course-meta">(Instructor: Un-Kyung Kim)</span> and Elementary Spanish 2 <span class="course-meta">(Instructor: Soohyun Jung)</span></dd></div>
-                <div><dt>2017 Spring</dt><dd>Undergraduate mentor for <a href="https://snucore-humanities.snu.ac.kr/work/support-fund">CORE fellowship</a></dd></div>
-              </dl>
-            </section>
-
-            <section class="teaching-place">
-              <h4><i>Korea Naval Academy (ROK Navy)</i></h4>
-              <dl class="course-list">
-                <div>
-                  <dt>2013 Fall –<br>2016 Spring</dt>
-                  <dd>
-                    Lecturer for second language (Spanish)
-                    <div class="course-detail">
-                      <span>Courses taught</span>
-                      <p><b>Spanish I/II</b> <span class="course-meta">(gen. ed.)</span>; <b>Spanish Conversation I/II</b>, <b>Spanish Composition</b>, <b>Practice in Spanish Translation</b>, <b>Regional Studies on Hispanic world</b> <span class="course-meta">(for majors)</span></p>
-                    </div>
-                  </dd>
-                </div>
-              </dl>
-            </section>
-          </section>
-
-          <section class="teaching-group" aria-labelledby="community-education-title">
-            <h3 id="community-education-title">Community Language Education</h3>
-
-            <section class="teaching-place">
-              <h4><i>Amherst Korean School</i></h4>
-              <dl class="course-list">
-                <div><dt>2022 Fall –<br>2024 Spring</dt><dd>Homeroom Teacher for 3rd–6th graders</dd></div>
-              </dl>
-            </section>
-
-            <section class="teaching-place">
-              <h4><i>Amherst-Pelham Regional Schools Biliteracy Club</i></h4>
-              <dl class="course-list">
-                <div><dt>2022 Spring</dt><dd>Spanish and Korean Instructor <span class="course-meta">(toward the Massachusetts State Seal of Biliteracy)</span></dd></div>
-              </dl>
-            </section>
-
-            <section class="teaching-place">
-              <h4><i>Independent Tutoring</i></h4>
-              <dl class="course-list">
-                <div><dt>2023 Spring –<br>2024 Summer</dt><dd>Spanish Tutor <span class="course-meta">(IB Spanish college-entrance exam preparation)</span></dd></div>
-              </dl>
-            </section>
-          </section>
-        </div>
-      </div>
-    </section>
-
-    <section id="personal" aria-labelledby="personal-title">
-      <h2 id="personal-title">Personal</h2>
-      <div class="section-body">
-        <p class="section-note">Interests and occasional notes beyond academic work.</p>
-        <div class="interest-bubbles">
-          <details>
-            <summary>Languages</summary>
-            <div class="bubble-content">
-              <!-- Add notes, links, or short essays here. -->
-            </div>
-          </details>
-          <details>
-            <summary>Mind–body practice</summary>
-            <div class="bubble-content">
-              <!-- Add notes, links, or short essays here. -->
-            </div>
-          </details>
-          <details>
-            <summary>LGBTQ translation</summary>
-            <div class="bubble-content">
-              <!-- Add notes, links, or short essays here. -->
-            </div>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" aria-labelledby="contact-title">
-      <h2 id="contact-title">Contact</h2>
-      <div class="section-body contact-list">
-        <a href="mailto:heejoongchoi@umass.edu">heejoongchoi@umass.edu</a>
-        <a href="https://github.com/drchoi1">GitHub</a>
-      </div>
-    </section>
-
   </main>
 
-  <footer>
-    <p>© <span id="year"></span> Hee Joong Choi</p>
-  </footer>
-
-  <script>
-    const root = document.documentElement;
-    const toggle = document.querySelector('.theme-toggle');
-    const label = document.querySelector('.theme-label');
-    const themes = ['system', 'light', 'dark'];
-
-    function renderTheme() {
-      const theme = root.dataset.theme || 'system';
-      label.textContent = theme[0].toUpperCase() + theme.slice(1);
-    }
-
-    toggle.addEventListener('click', () => {
-      const current = themes.indexOf(root.dataset.theme || 'system');
-      const next = themes[(current + 1) % themes.length];
-      root.dataset.theme = next;
-      localStorage.setItem('theme', next);
-      renderTheme();
-    });
-
-    document.querySelector('#year').textContent = new Date().getFullYear();
-    renderTheme();
-  </script>
+  <footer><p>© <span data-year></span> Hee Joong Choi</p></footer>
+  <script src="/site.js"></script>
 </body>
 </html>
