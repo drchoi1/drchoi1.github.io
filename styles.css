@@ -183,6 +183,51 @@ h3 { margin: 0; font-size: 1rem; font-weight: 600; }
 .research-areas article:last-child { padding-bottom: 0; }
 .research-areas p { margin: 0; }
 
+.teaching-place + .teaching-place { margin-top: 2.75rem; }
+
+.teaching-place h3 {
+  color: var(--accent);
+  margin-bottom: 0.85rem;
+}
+
+.course-list { margin: 0; }
+
+.course-list > div {
+  display: grid;
+  grid-template-columns: 8rem minmax(0, 1fr);
+  gap: 1.25rem;
+  border-top: 1px solid var(--line);
+  padding-block: 0.8rem;
+}
+
+.course-list dt {
+  color: var(--muted);
+  font-size: 0.84rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.course-list dd { margin: 0; }
+
+.course-detail {
+  display: grid;
+  grid-template-columns: 7rem minmax(0, 1fr);
+  gap: 1rem;
+  border-top: 1px dashed var(--line);
+  color: var(--muted);
+  font-size: 0.88rem;
+  margin-top: 0.8rem;
+  padding-top: 0.8rem;
+}
+
+.course-detail span {
+  font-size: 0.76rem;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.course-detail p { margin: 0; }
+
 .interest-bubbles {
   display: flex;
   flex-wrap: wrap;
@@ -258,7 +303,14 @@ footer {
   .portrait { width: min(13rem, 55vw); }
   main > section:not(.intro) { grid-template-columns: 1fr; gap: 1rem; padding-block: 2.75rem; scroll-margin-top: 6.5rem; }
   .research-areas article { grid-template-columns: 1fr; gap: 0.5rem; }
+  .course-list > div { grid-template-columns: 6.5rem minmax(0, 1fr); gap: 0.8rem; }
+  .course-detail { grid-template-columns: 1fr; gap: 0.35rem; }
   .interest-bubbles details[open] { flex-basis: 100%; }
+}
+
+@media (max-width: 420px) {
+  .course-list > div { grid-template-columns: 1fr; gap: 0.25rem; }
+  .course-list dt br { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
