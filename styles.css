@@ -99,7 +99,7 @@ a:hover, a:focus-visible { text-decoration-color: var(--accent); }
 }
 
 main, footer {
-  width: min(58rem, calc(100% - 2rem));
+  width: min(78rem, calc(100% - 3rem));
   margin-inline: auto;
 }
 
@@ -137,7 +137,7 @@ h1 span { display: block; color: var(--muted); font-size: 0.42em; margin-top: 0.
 
 main > section:not(.intro) {
   display: grid;
-  grid-template-columns: 10rem minmax(0, 1fr);
+  grid-template-columns: 8rem minmax(0, 1fr);
   gap: 2rem;
   border-top: 1px solid var(--line);
   padding-block: 3.5rem;
@@ -183,21 +183,20 @@ h3 { margin: 0; font-size: 1rem; font-weight: 600; }
 .research-areas article:last-child { padding-bottom: 0; }
 .research-areas p { margin: 0; }
 
-.teaching-place + .teaching-place { margin-top: 2.75rem; }
+.teaching-place + .teaching-place { margin-top: 2rem; }
 
 .teaching-place h3 {
   color: var(--accent);
-  margin-bottom: 0.85rem;
+  margin-bottom: 0.45rem;
 }
 
 .course-list { margin: 0; }
 
 .course-list > div {
   display: grid;
-  grid-template-columns: 8rem minmax(0, 1fr);
-  gap: 1.25rem;
-  border-top: 1px solid var(--line);
-  padding-block: 0.8rem;
+  grid-template-columns: 7.5rem minmax(0, 1fr);
+  gap: 1rem;
+  padding-block: 0.18rem;
 }
 
 .course-list dt {
@@ -212,11 +211,9 @@ h3 { margin: 0; font-size: 1rem; font-weight: 600; }
   display: grid;
   grid-template-columns: 7rem minmax(0, 1fr);
   gap: 1rem;
-  border-top: 1px dashed var(--line);
   color: var(--muted);
   font-size: 0.88rem;
-  margin-top: 0.8rem;
-  padding-top: 0.8rem;
+  margin-top: 0.35rem;
 }
 
 .course-detail span {
@@ -227,6 +224,11 @@ h3 { margin: 0; font-size: 1rem; font-weight: 600; }
 }
 
 .course-detail p { margin: 0; }
+
+@media (min-width: 1280px) {
+  .course-list > div > dd { white-space: nowrap; }
+  .course-detail p { white-space: normal; }
+}
 
 .interest-bubbles {
   display: flex;
@@ -295,6 +297,7 @@ footer {
 }
 
 @media (max-width: 700px) {
+  main, footer { width: min(100% - 2rem, 78rem); }
   .nav { flex-wrap: wrap; gap: 0 1rem; padding-block: 0.65rem; }
   .site-name { flex: 1 1 auto; }
   .theme-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
