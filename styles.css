@@ -345,8 +345,6 @@ h3 { margin: 0; font-size: 1rem; font-weight: 600; }
   padding-block: 1.25rem;
 }
 
-.project:first-child { padding-top: 0; }
-
 .project details { margin: 0; }
 
 .project summary {
@@ -559,27 +557,28 @@ footer {
     grid-template-columns: 5rem minmax(0, 1fr);
     gap: 1rem;
     width: min(100% - 2rem, 90rem);
-    max-height: 13rem;
+    max-height: var(--profile-max-height, 13rem);
     margin: 0 auto;
     padding-block: 0.8rem 0.45rem;
     overflow: hidden;
-    opacity: 1;
+    opacity: var(--profile-opacity, 1);
     visibility: visible;
-    transition: max-height 180ms ease, opacity 140ms ease, padding 180ms ease;
   }
   .site-header .profile-photo { width: 5rem; }
   .profile-name { margin-top: 0; }
   .profile-meta { display: flex; flex-wrap: wrap; gap: 0.45rem 1rem; margin-top: 0.8rem; }
   .profile-meta li + li { margin-top: 0; }
 
-  .site-header:not(.is-compact) .site-name { display: none; }
+  .site-header .site-name {
+    max-width: var(--compact-name-width, 0);
+    overflow: hidden;
+    opacity: var(--compact-name-opacity, 0);
+    white-space: nowrap;
+  }
+
   .site-header:not(.is-compact) .nav { justify-content: flex-end; }
 
   .site-header.is-compact .profile-bar {
-    max-height: 0;
-    padding-block: 0;
-    opacity: 0;
-    visibility: hidden;
     pointer-events: none;
   }
 }
@@ -591,5 +590,4 @@ footer {
 
 @media (prefers-reduced-motion: reduce) {
   :root { scroll-behavior: auto; }
-  .site-header .profile-bar { transition: none; }
 }
