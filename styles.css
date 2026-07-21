@@ -235,25 +235,29 @@ h3 { margin: 0; font-size: 1rem; font-weight: 600; }
   list-style: none;
 }
 
-.dot-list li { display: block; }
+.dot-list li {
+  display: flex;
+  align-items: baseline;
+}
 .dot-list li + li { margin-top: 0.3rem; }
 
 .dot-list li::before {
   content: "·";
+  flex: 0 0 1rem;
   color: var(--accent);
   font-weight: 700;
-  padding-inline: 0.65rem;
+  margin-right: 0.35rem;
+  text-align: center;
 }
 
-.dot-list li:first-child::before { padding-left: 0; }
-
-.projects { display: block; }
-.projects > h2 { margin-bottom: 1.25rem; }
+.project-list { min-width: 0; }
 
 .project {
   border-top: 1px solid var(--line);
   padding-block: 1.25rem;
 }
+
+.project:first-child { padding-top: 0; }
 
 .project details { margin: 0; }
 
