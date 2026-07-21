@@ -311,7 +311,6 @@ h3 { margin: 0; font-size: 1rem; font-weight: 600; }
   display: grid;
   grid-template-columns: 10rem minmax(0, 1fr);
   gap: 2rem;
-  border-top: 1px solid var(--line);
   padding-block: 2.75rem;
 }
 
@@ -324,17 +323,20 @@ h3 { margin: 0; font-size: 1rem; font-weight: 600; }
 }
 
 .dot-list li {
-  display: flex;
-  align-items: baseline;
+  position: relative;
+  display: block;
+  padding-left: 1.35rem;
 }
 .dot-list li + li { margin-top: 0.3rem; }
 
 .dot-list li::before {
   content: "·";
-  flex: 0 0 1rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1rem;
   color: var(--accent);
   font-weight: 700;
-  margin-right: 0.35rem;
   text-align: center;
 }
 
@@ -554,31 +556,41 @@ footer {
   .site-header .profile-bar {
     position: static;
     display: grid;
-    grid-template-columns: 5rem minmax(0, 1fr);
-    gap: 1rem;
+    grid-template-columns: var(--profile-photo-column, 5rem) minmax(0, 1fr);
+    gap: var(--profile-card-gap, 1rem);
     width: min(100% - 2rem, 90rem);
-    max-height: var(--profile-max-height, 13rem);
     margin: 0 auto;
     padding-block: 0.8rem 0.45rem;
-    overflow: hidden;
-    opacity: var(--profile-opacity, 1);
     visibility: visible;
   }
-  .site-header .profile-photo { width: 5rem; }
+  .site-header .profile-photo {
+    width: var(--profile-photo-size, 5rem);
+    opacity: var(--profile-detail-opacity, 1);
+  }
   .profile-name { margin-top: 0; }
-  .profile-meta { display: flex; flex-wrap: wrap; gap: 0.45rem 1rem; margin-top: 0.8rem; }
+  .site-header .profile-title {
+    max-height: var(--profile-title-height, 4rem);
+    margin-top: var(--profile-title-margin, 0.35rem);
+    overflow: hidden;
+    opacity: var(--profile-detail-opacity, 1);
+  }
+  .profile-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem 1rem;
+    max-height: var(--profile-meta-height, 5rem);
+    margin-top: var(--profile-meta-margin, 0.8rem);
+    overflow: hidden;
+    opacity: var(--profile-detail-opacity, 1);
+  }
   .profile-meta li + li { margin-top: 0; }
 
-  .site-header .site-name {
-    max-width: var(--compact-name-width, 0);
-    overflow: hidden;
-    opacity: var(--compact-name-opacity, 0);
-    white-space: nowrap;
-  }
+  .site-header .site-name { display: none; }
 
   .site-header:not(.is-compact) .nav { justify-content: flex-end; }
 
-  .site-header.is-compact .profile-bar {
+  .site-header.is-compact .profile-title,
+  .site-header.is-compact .profile-meta {
     pointer-events: none;
   }
 }

@@ -11,7 +11,9 @@
   var profile = document.querySelector('.profile-bar');
   var main = frame && frame.querySelector('main');
   var mobileProfile = window.matchMedia('(max-width: 900px)');
-  var compactName = document.querySelector('.site-name');
+  var profilePhoto = profile && profile.querySelector('.profile-photo');
+  var profileTitle = profile && profile.querySelector('.profile-title');
+  var profileMeta = profile && profile.querySelector('.profile-meta');
   var profileScrollRange = 180;
   var profileFramePending = false;
 
@@ -44,8 +46,10 @@
         frame.insertBefore(profile, main);
 
       header.classList.remove('is-compact');
-      profile.removeAttribute('inert');
-      profile.removeAttribute('aria-hidden');
+      if (profileTitle)
+        profileTitle.removeAttribute('inert');
+      if (profileMeta)
+        profileMeta.removeAttribute('inert');
     }
   }
 
@@ -54,16 +58,23 @@
       return;
 
     var progress = Math.min(1, Math.max(0, window.scrollY / profileScrollRange));
-    var expandedHeight = profile ? profile.scrollHeight : 0;
-    var nameWidth = compactName ? compactName.scrollWidth : 0;
+    var remaining = 1 - progress;
+    var titleHeight = profileTitle ? profileTitle.scrollHeight : 0;
+    var metaHeight = profileMeta ? profileMeta.scrollHeight : 0;
 
-    header.style.setProperty('--profile-max-height', (expandedHeight * (1 - progress)) + 'px');
-    header.style.setProperty('--profile-opacity', String(1 - progress));
-    header.style.setProperty('--compact-name-opacity', String(progress));
-    header.style.setProperty('--compact-name-width', (nameWidth * progress) + 'px');
+    header.style.setProperty('--profile-photo-column', (5 * remaining) + 'rem');
+    header.style.setProperty('--profile-photo-size', (5 * remaining) + 'rem');
+    header.style.setProperty('--profile-card-gap', (1 * remaining) + 'rem');
+    header.style.setProperty('--profile-detail-opacity', String(remaining));
+    header.style.setProperty('--profile-title-height', (titleHeight * remaining) + 'px');
+    header.style.setProperty('--profile-title-margin', (0.35 * remaining) + 'rem');
+    header.style.setProperty('--profile-meta-height', (metaHeight * remaining) + 'px');
+    header.style.setProperty('--profile-meta-margin', (0.8 * remaining) + 'rem');
     header.classList.toggle('is-compact', progress >= 0.995);
-    profile.toggleAttribute('inert', progress >= 0.995);
-    profile.setAttribute('aria-hidden', progress >= 0.995 ? 'true' : 'false');
+    if (profileTitle)
+      profileTitle.toggleAttribute('inert', progress >= 0.995);
+    if (profileMeta)
+      profileMeta.toggleAttribute('inert', progress >= 0.995);
   }
 
   function requestCompactProfileUpdate() {
