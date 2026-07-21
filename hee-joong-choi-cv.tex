@@ -1,0 +1,231 @@
+% Hee Joong Choi — Academic Curriculum Vitae
+% Last updated: July 2026
+% Compile with: pdflatex hee-joong-choi-cv.tex (twice)
+
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[margin=0.72in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{newtxtext}
+
+\definecolor{umassmaroon}{HTML}{881C1C}
+\definecolor{muted}{HTML}{555555}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlist[itemize]{leftmargin=1.25em,itemsep=1pt,topsep=2pt,parsep=0pt}
+\setlist[enumerate]{leftmargin=1.5em,itemsep=3pt,topsep=2pt,parsep=0pt}
+\setcounter{secnumdepth}{0}
+
+\titleformat{\section}
+  {\large\bfseries\color{umassmaroon}}
+  {}{0pt}{}
+  [\vspace{1pt}\color{umassmaroon}\titlerule]
+\titlespacing*{\section}{0pt}{11pt}{5pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\small\color{muted}Hee Joong Choi \enspace\textperiodcentered\enspace Curriculum Vitae \enspace\textperiodcentered\enspace \thepage}
+
+\newcommand{\datedentry}[2]{%
+  \noindent\begin{tabularx}{\textwidth}{@{}X>{\raggedleft\arraybackslash}p{1.45in}@{}}
+    #1 & \textcolor{muted}{#2}
+  \end{tabularx}\par
+}
+
+\newcommand{\subentry}[1]{%
+  \hspace*{0.9em}\begin{minipage}{\dimexpr\textwidth-0.9em\relax}
+    \small #1
+  \end{minipage}\par
+}
+
+\newcommand{\educationdetail}[1]{%
+  \vspace{-1pt}\subentry{#1}
+}
+
+\newcommand{\educationgap}{\vspace{5pt}}
+\newcommand{\traininggap}{\vspace{2pt}}
+
+\newcommand{\presentation}[4]{%
+  \datedentry{\textbf{#1}. \textit{#2}. #3}{#4}\vspace{2pt}
+}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE\bfseries Hee Joong Choi}\par
+  \vspace{3pt}
+  {\normalsize Joint Ph.D. Student in Hispanic Linguistics and Linguistics}\par
+  \vspace{2pt}
+  University of Massachusetts Amherst\par
+  \vspace{4pt}
+  \href{mailto:heejoongchoi@umass.edu}{heejoongchoi@umass.edu}
+  \enspace\textperiodcentered\enspace
+  \href{https://drchoi1.github.io/}{drchoi1.github.io}
+\end{center}
+
+\vspace{3pt}
+
+\section{Research Interests}
+
+Formal pragmatics; non-canonical questions, especially biased polar and conjectural questions;
+evidentiality and evidential bias; intonational meaning of nuclear contours; sentence-final
+particles and speech-act distinctions in East Asian languages; norms of discourse.
+
+\section{Education}
+
+\datedentry{\textbf{Joint Ph.D. in Hispanic Linguistics and Linguistics}, \textit{University of Massachusetts Amherst}}{2021--present}
+\educationdetail{Advisor: María Biezma.}
+
+% \datedentry{\textbf{Seoul National University} --- Doctoral study, Hispanic Language and Literature}{2019--2021}
+
+\educationgap
+\datedentry{\textbf{M.A. in Hispanic Language and Literature}, \textit{Seoul National University}}{2016--2019}
+\educationdetail{Thesis: \textit{A Monoclausal Analysis of Spanish Split Questions}.\\
+Advisor: Un-Kyung Kim. Committee: Heejeong Ko (chair), Un-Kyung Kim, and Sangwan Shim.}
+
+\educationgap
+\datedentry{\textbf{B.A. in Hispanic Language and Literature}, \textit{Seoul National University}}{2010--2013}
+\educationdetail{Minor: Linguistics.\\
+Graduated \textit{summa cum laude}.}
+
+\vspace{7pt}
+{\normalsize\underline{Non-Degree Training}}
+
+\vspace{2pt}
+\datedentry{North American Summer School in Logic, Language, and Information (NASSLLI), \textit{University of Washington}}{June 2025}
+\traininggap
+\datedentry{Linguistic Society of America Summer Institute, \textit{University of Massachusetts Amherst}}{June--July 2023}
+\traininggap
+\datedentry{Korean Language Instructor Training Program, \textit{Seoul National University Language Education Institute}}{March--June 2021}
+\educationdetail{120-hour instructor-training program.}
+\traininggap
+\datedentry{Winter School on Portuguese, \textit{Brazilian Cultural Center, Seoul}}{January 2017}
+\educationdetail{Intermediate level.}
+\traininggap
+\datedentry{Cursos Internacionales, \textit{University of Salamanca}}{January 2012}
+\educationdetail{Advanced level; final evaluation: \textit{sobresaliente}.}
+
+\section{Publication}
+
+\datedentry{Choi, Hee Joong. ``A question of negatively biased commitment: Evidence from Korean evidential long negation polar questions.'' \textit{Proceedings of CLS 62}. Forthcoming.}{forthcoming}
+
+\section{Conference Presentations}
+
+\presentation{Poster}{Interrogative Flip revisited: Adding evidentiality to biased polar questions}{West Coast Conference on Formal Linguistics 44 (WCCFL 44), Universidad Nacional Autónoma de México}{May 2026}
+
+\presentation{Talk}{A question of negatively biased commitment: Evidence from Korean evidential long negation polar questions}{Chicago Linguistic Society 62 (CLS 62)}{April 2026}
+
+\presentation{Talk}{Speaker bias in commitment terms}{Theoretical Linguistics at Keio (TaLK) Semantics Conference}{March 2026}
+
+\presentation{Poster}{Commitment and bias in Korean long negation polar questions (LN-PQs)}{Linguistic Society of America Annual Meeting, New Orleans, Louisiana}{January 2026}
+
+\presentation{Talk}{Bias without negation: The role of prosody in Puerto Rican Spanish polar questions}{Hispanic Linguistics Symposium, University of Arizona}{November 2025}
+
+\presentation{Talk}{An experimental study on speaker bias in Puerto Rican Spanish polar questions}{55th Linguistic Symposium on Romance Languages, Santo Domingo, Dominican Republic}{September 2025}
+
+\presentation{Talk}{Contextual effect on speaker bias polar questions in Puerto Rican Spanish}{Polar Question Form[s] Across Languages 2 (POQAL-2), University of Amsterdam}{April 2025}
+
+\presentation{Talk}{Ambiguous speech acts: Negative neutralization in Korean}{10th UC Davis Symposium on Language Research, University of California, Davis}{May 2024}
+
+\presentation{Talk}{Negative polar questions and negative neutralization in Korean}{Southern New England Workshop in Semantics (SNEWS), Harvard University}{February 2024}
+
+\presentation{Talk}{A monoclausal analysis of Spanish split questions}{16th Workshop on Syntax, Semantics and Phonology, Complutense University of Madrid}{June 2019}
+
+\presentation{Talk}{A monoclausal approach to Spanish split questions and its implications for wh-fronting}{29th Colloquium of Generative Grammar, University of Castilla-La Mancha}{May 2019}
+
+\presentation{Talk}{A monoclausal approach to Spanish split questions}{2019 CORE Conference, Seoul National University [in Korean]}{January 2019}
+
+\presentation{Talk}{A monoclausal analysis of Spanish split questions}{Winter Conference of the Korean Association of Hispanists, Korea University [in Korean]}{December 2018}
+
+\presentation{Talk}{Investigation of [EPP] by means of wh-movement}{Winter Conference of the Korean Association of Hispanists, Hankuk University of Foreign Studies [in Korean]}{December 2017}
+
+\presentation{Talk}{A modified syntactic explanation for \textit{al + infinitive} from Rico (2016)}{Summer Conference of the Korean Association of Hispanists, University of Ulsan [in Korean]}{June 2017}
+
+\section{Higher-Education Teaching}
+
+\textbf{University of Massachusetts Amherst}
+
+\datedentry{Teaching Assistant, LING 394BI: Language and Cognition}{Spring 2026}
+\datedentry{Teaching Assistant, LING 101: People and Their Language}{Fall 2025}
+\datedentry{Teaching Assistant, SPAN 311: Spanish Advanced Grammar}{Spring 2025}
+\datedentry{Teaching Assistant, SPAN 311: Spanish Advanced Grammar}{Fall 2024}
+\datedentry{Teaching Assistant, LING 101: People and Their Language}{Spring 2024}
+\datedentry{Teaching Associate, SPAN 240: Intermediate Spanish II}{Spring--Fall 2023}
+\datedentry{Teaching Associate, SPAN 230: Intermediate Spanish I}{Fall 2022}
+\datedentry{Teaching Associate, SPAN 120: Elementary Spanish II}{Spring 2022}
+\datedentry{Teaching Associate, SPAN 110: Elementary Spanish I}{Fall 2021}
+
+\vspace{3pt}
+\textbf{Seoul National University}
+
+\datedentry{Teaching Assistant, Practice in Latin American Poems}{Fall 2020}
+\datedentry{Teaching Assistant, Spanish Grammar II and Elementary Spanish II}{Fall 2019}
+\datedentry{Undergraduate Mentor, CORE Fellowship}{Spring 2017}
+
+\vspace{3pt}
+\textbf{Korea Naval Academy (Republic of Korea Navy)}
+
+\datedentry{Lecturer in Spanish as a second language}{Fall 2013--Spring 2016}
+\subentry{Courses: Spanish I--II; Spanish Conversation I--II; Spanish Composition; Practice in Spanish Translation; Regional Studies on the Hispanic World. Completed as part of military service; discharged as Lieutenant Junior Grade.}
+
+\section{Community Language Education}
+
+\datedentry{Homeroom Teacher, grades 3--6, Amherst Korean School}{Fall 2022--Spring 2024}
+\datedentry{Spanish and Korean Instructor, Amherst-Pelham Regional Schools Biliteracy Club}{Spring 2022}
+\subentry{Instruction toward the Massachusetts State Seal of Biliteracy.}
+\datedentry{Spanish Tutor, IB Spanish college-entrance examination preparation}{occasional}
+
+\section{Professional Service}
+
+\datedentry{Linguistics Colloquium Organizer, UMass Amherst}{Fall 2025}
+\datedentry{Semantics Workshop Organizer, UMass Amherst}{Fall 2025-Spring 2026}
+\datedentry{Linguistics Graduate Open House Minion, UMass Amherst}{Spring 2025}
+\datedentry{Syntax-Semantics Reading Group (SSRG) Organizer, Graduate Linguistics Student Association}{Fall 2024--Spring 2025}
+\datedentry{International Studies Council Representative, Spanish and Portuguese Graduate Students Organization}{Fall 2022--Spring 2024}
+\datedentry{Graduate Assistant, UMass Salamanca Summer Program}{July 2022}
+\datedentry{Departmental Program Manager, Department of Hispanic Language and Literature, Seoul National University}{Fall 2017--Summer 2019}
+\datedentry{Coordinator, 8th Seoul National University Spanish Camp}{August 2018}
+\datedentry{Assistant, Seoul National University in World Program (Madrid)}{Summer 2017}
+
+\section{Translation and Interpretation}
+
+\datedentry{Interpreter, 18th Jeonju International Film Festival}{May 2017}
+\subentry{Interpretation for guest-visit sessions involving films from Spain, Mexico, and Chile.}
+
+\datedentry{Literary translator into Korean, essays by José Carlos Mariátegui}{January 2017}
+\subentry{``Oriente y occidente'' and ``La revolución turca y el Islam,'' from \textit{La escena contemporánea}.}
+
+\datedentry{Spanish Interpreter and Translator, Republic of Korea Navy}{2013--2016}
+\subentry{Assignments included the first bilateral talks between the Republic of Korea and Peruvian navies.}
+
+\section{Honors}
+
+\datedentry{Vice Admiral's Merit, Superintendent of the Korea Naval Academy}{July 2015}
+\subentry{Recognized for improving cadets' foreign-language proficiency through regular and advanced courses, and for interpretation during visits by Latin American naval officers.}
+
+\section{Memberships}
+
+\datedentry{Linguistic Society of America}{2025--present}
+\datedentry{Korean Association of Hispanists, associate member}{2016--present}
+
+\section{Languages}
+
+\begin{tabularx}{\textwidth}{@{}>{\bfseries}p{1.25in}X@{}}
+Native & Korean \\
+Professional & English; Spanish (DELE C2) \\
+Working & Portuguese; French (DELF B2) \\
+Elementary & Mandarin Chinese; Japanese (JLPT Level 3); Italian \\
+Reading & Latin
+\end{tabularx}
+
+\end{document}
