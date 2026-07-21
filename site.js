@@ -41,6 +41,9 @@
     if (mobileProfile.matches) {
       if (profile.parentNode !== header)
         header.insertBefore(profile, nav);
+
+      profile.removeAttribute('inert');
+      profile.removeAttribute('aria-hidden');
     } else {
       if (profile.parentNode !== frame)
         frame.insertBefore(profile, main);

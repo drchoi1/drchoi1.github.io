@@ -51,7 +51,6 @@ a:hover, a:focus-visible { text-decoration-color: var(--accent); }
   position: sticky;
   top: 0;
   z-index: 10;
-  border-bottom: 1px solid var(--line);
   background: var(--header);
   backdrop-filter: blur(12px);
 }
@@ -156,12 +155,19 @@ main, footer {
 }
 
 .profile-name {
+  display: block;
+  position: relative;
+  z-index: 1;
   margin: 1.1rem 0 0;
   font-size: 1.08rem;
   font-weight: 650;
   letter-spacing: -0.015em;
+  opacity: 1;
+  visibility: visible;
   white-space: nowrap;
 }
+
+.profile-copy { min-width: 0; }
 
 .site-header .profile-name { color: var(--accent); }
 
@@ -223,7 +229,6 @@ main, footer {
   display: grid;
   grid-template-columns: 8rem minmax(0, 1fr);
   gap: 2rem;
-  border-top: 1px solid var(--line);
   padding-block: 2.75rem;
 }
 
@@ -280,7 +285,6 @@ main > section:not(.intro) {
   display: grid;
   grid-template-columns: 8rem minmax(0, 1fr);
   gap: 2rem;
-  border-top: 1px solid var(--line);
   padding-block: 3.5rem;
   scroll-margin-top: 4.5rem;
 }
@@ -347,7 +351,6 @@ h3 { margin: 0; font-size: 1rem; font-weight: 600; }
 .project-list { min-width: 0; }
 
 .project {
-  border-top: 1px solid var(--line);
   padding-block: 1.25rem;
 }
 
@@ -529,7 +532,6 @@ h3 { margin: 0; font-size: 1rem; font-weight: 600; }
 .bubble-content p { margin: 0; }
 
 footer {
-  border-top: 1px solid var(--line);
   color: var(--muted);
   font-size: 0.8rem;
   margin-top: 3rem;
@@ -591,6 +593,15 @@ footer {
   .profile-meta li + li { margin-top: 0; }
 
   .site-header .site-name { display: none; }
+
+  .nav-links a,
+  .nav-links a[aria-current="page"] {
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+  }
+
+  .nav-links a[aria-current="page"] { color: var(--accent); }
 
   .site-header:not(.is-compact) .nav { justify-content: flex-end; }
 
