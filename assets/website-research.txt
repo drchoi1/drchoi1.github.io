@@ -5,9 +5,26 @@ Research Interests
 - Semantics related to <b>sentence-final particles</b> in East Asian Languages
 - Formal Pragmatics; basically, how all of the above purport to <b>norms of discourse</b>
 
-Side interests
+Side Interests
 - wh-indefinites in Korean and Japanese (interacting with different sentence types)
 - social perception of Spanish by Asian Latinos
 - social meaning implications of Korean honorifics (interacting with speech acts)
 
+Projects
+- Ambiguity of Korean long-form negation polar questions and disambiguation by contextual evidence
+-- Negative polar questions (NPQs) are widely known for encoding speaker's positive epistemic bias. A less well-known but established fact about Korean long-form NPQs (LN-PQs) is that the bias reading is polarity-ambiguous. I show the bias disambiguation by situating this construction in context, especially subjecting it to negative contextual evidence. I also employ evidentiality (grammatical encoding of the source of information) in Korean to highlight the negative bias reading in Korean LN-PQs.
+-- I use [Gunlogson's (2008)](https://www.jbe-platform.com/content/journals/10.1075/bjl.22.06gun) commitment-based model to capture the two bias readings in Korean LN-PQs. Some typological considerations on Interrogative Flip (the flipping of evidential source in inquisitive speech acts) are also discussed.
+--- Paper: Proceedings of CLS 62 (forthcoming)
+--- Poster: <i>Interrogative Flip revisited: adding evidentiality to biased polar questions</i>. The West Coast Conference on Formal Linguistics (WCCFL) 44 (Universidad Nacional Autónoma de México;  May 6-8, 2026)
+--- Talk: <i>A question of negatively biased commitment: evidence from Korean evidential Long Negation Polar Questions</i>. Chicago Linguistics Society (CLS) 62 (April 17-19, 2026)
+--- Talk: <i>Speaker bias in commitment terms</i>. Theoretical Linguistics at Keio (TaLK) Semantics Conference (March 14-16, 2026)
+--- Poster: <i>Commitment and Bias in Korean Long Negation Polar Questions (LN-PQs)</i>. Linguistic Society of America (LSA) Annual Meeting 2026 (New Orleans, LA; January 8-11, 2026)
 
+- Form-based account of conjectural questions
+-- A recent project that took off as a puzzle found in the interaction of sentence type and evidentiality in Korean LN-PQs, some sentential force and an utterance-final (rising) contour come to the foci of discussion. I aim to show that conjectural meaning in conjectural questions across languages (notably, German verb-final <i>wohl</i> questions in [Eckardt, 2020](https://semprag.org/index.php/sp/article/view/sp.13.9)) can be reduced to the interaction between declarative force, prosody AND evidential dimensions. 
+
+- Context and inquisitively in Puerto Rican Spanish
+-- I review the role of prosody in biased polar questions, introduced as Ladd's (1981) Outer vs. Inner negation questions in [Armstrong 2017](https://www.degruyterbrill.com/document/doi/10.1515/probus-2014-0016/html). Following up on Armstrong's DCT-style production study, I conducted a perception study on assertion contours of Puerto Rican Spanish (PRS), specifically under what contextual conditions can these contours be construed as purely speaker-biased.
+--- Talk: <i>Bias Without Negation: The Role of Prosody in Puerto Rican Spanish Polar Questions</i>. Hispanic Linguistics Symposium (HLS) 2025 at University of Arizona (November 13-15, 2025)
+--- Talk: <i>An experimental Study on Speaker bias in Puerto Rican Spanish Polar Questions</i>. 55th Linguistic Symposium on Romance Languages (LSRL) 55
+--- Talk: <i>Contextual Effect on Speaker Bias Polar Questions in Puerto Rican Spanish</i>. 2nd meeting of Polar Questions Forms[s] Across Languages (POQAL-2) at the University of Amsterdam (24-25 April, 2025)

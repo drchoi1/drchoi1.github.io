@@ -219,18 +219,80 @@ h3 { margin: 0; font-size: 1rem; font-weight: 600; }
   margin-left: 0.4rem;
 }
 
-.research-areas { margin-top: 2rem; }
-
-.research-areas article {
+.research-section {
   display: grid;
-  grid-template-columns: minmax(11rem, 0.8fr) minmax(0, 1.2fr);
+  grid-template-columns: 10rem minmax(0, 1fr);
   gap: 2rem;
   border-top: 1px solid var(--line);
-  padding-block: 1.4rem;
+  padding-block: 2.75rem;
 }
 
-.research-areas article:last-child { padding-bottom: 0; }
-.research-areas p { margin: 0; }
+.research-section > h2 { font-size: 1rem; }
+
+.dot-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dot-list li { display: block; }
+.dot-list li + li { margin-top: 0.3rem; }
+
+.dot-list li::before {
+  content: "·";
+  color: var(--accent);
+  font-weight: 700;
+  padding-inline: 0.65rem;
+}
+
+.dot-list li:first-child::before { padding-left: 0; }
+
+.projects { display: block; }
+.projects > h2 { margin-bottom: 1.25rem; }
+
+.project {
+  border-top: 1px solid var(--line);
+  padding-block: 1.25rem;
+}
+
+.project details { margin: 0; }
+
+.project summary {
+  cursor: pointer;
+  font-size: 1.05rem;
+  font-weight: 600;
+  list-style: none;
+}
+
+.project summary::-webkit-details-marker { display: none; }
+
+.project summary::before {
+  content: "+";
+  display: inline-block;
+  color: var(--accent);
+  margin-right: 0.65rem;
+  width: 0.8rem;
+}
+
+.project details[open] summary::before { content: "−"; }
+
+.project-outline {
+  border: 1px solid var(--line);
+  margin: 1.25rem 0 0 1.45rem;
+  padding: 1rem 1rem 1rem 2rem;
+}
+
+.project-outline li + li { margin-top: 0.8rem; }
+
+.project-outcomes {
+  color: var(--muted);
+  font-size: 0.88rem;
+  margin: 1rem 0 0 1.45rem;
+  padding-left: 1rem;
+}
+
+.project-outcomes li + li { margin-top: 0.4rem; }
+.project-outcomes b { color: var(--text); }
 
 .teaching-group + .teaching-group { margin-top: 3rem; }
 
@@ -380,7 +442,7 @@ footer {
   .inner-page { padding-block: 3.5rem; }
   .page-content > section { grid-template-columns: 1fr; gap: 1rem; }
   main > section:not(.intro) { grid-template-columns: 1fr; gap: 1rem; padding-block: 2.75rem; scroll-margin-top: 6.5rem; }
-  .research-areas article { grid-template-columns: 1fr; gap: 0.5rem; }
+  .research-section { grid-template-columns: 1fr; gap: 1rem; }
   .course-list > div { grid-template-columns: 6.5rem minmax(0, 1fr); gap: 0.8rem; }
   .course-detail { grid-template-columns: 1fr; gap: 0.35rem; }
   .interest-bubbles details[open] { flex-basis: 100%; }
